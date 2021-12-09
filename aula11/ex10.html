@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 10 - JavaScript</title>
+
+    <style>
+        *{
+            background-color: #6b5fb9;
+            text-align: center;
+        }
+        h1{
+            font-style: italic;
+        }
+        input{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>DETRAN - SISTEMA DE VERIFICAÇÃO DE MULTAS</h1>
+    Velocidade do Carro: <input type="number" name="txtvelo" id="txtvelo"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resu"></div>
+
+    <script>
+        function calcular(){
+            var txtvelo = window.document.getElementById('txtvelo')
+            var velo = Number(txtvelo.value)
+            var resu = window.document.querySelector('div#resu')
+            resu.innerHTML = `<p> Velocidade do Carro: <strong> ${velo} Km/h </strong></p>`
+            if(velo > 60){
+                resu.innerHTML += `<p> Você ultrapassou o limite de velocidade. <Strong> MULTADO </strong></p>`
+            }
+            resu.innerHTML += `<p> Use cinto de segurança! </p>`
+        }
+    </script>
+</body>
+</html>

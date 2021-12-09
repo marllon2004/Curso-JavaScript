@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Ex09 - JavaScript</title>
+
+    <style>
+        *{
+            background-color: #6b5fb9;
+            text-align: center;
+        }
+        h1{
+            font-style: italic;
+        }
+        input{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>VERIFICAÇÃO DE IMIGRAÇÃO</h1>    
+    País de Origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resu"></div>
+
+    <script>
+        function verificar(){
+            var pais = window.document.getElementById('txtpais').value.toLowerCase()
+            resu.innerHTML = `<p> País de moradia: <strong> Brasil </strong></p>`
+            if(pais == "brasil"){
+                resu.innerHTML += `<p> Você é brasileiro! </p>`
+            }
+            else{
+                resu.innerHTML += `<p> Você é estrangeiro! </p>`
+            }
+        }
+    </script>
+</body>
+</html>
