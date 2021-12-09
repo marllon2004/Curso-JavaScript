@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05 com DOM - JavaScript</title>
+
+    <style>
+        *{
+            background-color: #6b5fb9;
+            text-align: center;
+        }
+        h1{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos com o DOM</h1> 
+    <p>Resultado....</p>
+    <p>Aprendendo a usar <strong> DOM </strong> em JavaScript</p>
+    <div id="msg">Clique aqui!</div>
+
+    <script>
+       //var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*window.document.write('Mensagem: '+ p1.innerText)
+        corpo.style.background = 'black'
+        p1.style.color = 'white'
+        window.alert(p1.innerHTML)
+        var div = window.document.getElementById('msg')
+        div.style.backgroundColor = '#545454'
+        div.innerText = 'Estou aguardando...'
+        var div = window.document.getElementsByName('msg')[0]
+        div.innerText = 'Hmmm...'*/
+        var div = window.document.querySelector('div#msg')
+        div.style.color = 'white'
+    </script>
+</body>
+</html>
